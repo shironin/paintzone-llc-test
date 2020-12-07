@@ -1,38 +1,40 @@
 @import "~src/scss/variables";
 
-.wrapper {
-  max-width: $content-area-width;
-  width: 100%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 15% 15% 70%;
+:host {
+  .wrapper {
+    max-width: $content-area-width;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 15% 15% 70%;
 
-  .pink-text {
-    background-color: $main-color-pink;
-    writing-mode: tb;
-    font-size: 100px;
-    transform: rotate(180deg);
-    padding: (3*$padding) 0 (3*$padding) 0;
-    margin-top: -100px;
-  }
-
-  .dark-square {
-    width: 80px;
-    height: 80px;
-    background-color: $main-color-dark;
-    justify-self: center;
-    margin-top: 160px;
-  }
-
-  .text-wrapper {
-    padding-top: 230px;
-
-    .title {
-
+    .pink-text {
+      background-color: $main-color-pink;
+      writing-mode: tb;
+      font-size: 100px;
+      transform: rotate(180deg);
+      padding: (3*$padding) 0 (3*$padding) 0;
+      margin-top: -100px;
     }
 
-    .text {
+    .dark-square {
+      width: 80px;
+      height: 80px;
+      background-color: $main-color-dark;
+      justify-self: center;
+      margin-top: 160px;
+    }
 
+    .text-wrapper {
+      padding-top: 230px;
+
+      .title {
+
+      }
+
+      .text {
+
+      }
     }
   }
 }

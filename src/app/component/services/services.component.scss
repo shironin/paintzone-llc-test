@@ -1,0 +1,32 @@
+@import "~src/scss/variables";
+
+:host {
+  .wrapper {
+    margin-top: $section-margin;
+    margin-bottom: $section-margin;
+
+    .header-wrapper {
+      width: 100%;
+      max-width: $content-area-width;
+      margin: auto;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+
+      .gallery-item {
+        height: 400px;
+        position: relative;
+
+        .text {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+

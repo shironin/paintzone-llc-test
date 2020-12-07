@@ -1,3 +1,7 @@
-.main-image {
-  width: 100%;
+@import "~src/scss/variables";
+
+:host {
+  .main-image {
+    width: 100%;
+  }
 }
