@@ -1,0 +1,43 @@
+@import "~src/scss/variables";
+
+.wrapper {
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100px;
+  background-color: rgba($main-color-pink-r, $main-color-pink-g, $main-color-pink-b, 0.2);
+  display: flex;
+  //padding-left: $padding;
+  //padding-right: $padding;
+
+  .inner {
+    max-width: $content-area-width;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 100px auto;
+
+    .logo {
+      width:50px;
+      height: 50px;
+      background-color: #13375B;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+
+      .nav-button {
+        width: 100px;
+        text-align: center;
+        color: white;
+        align-self: center;
+      }
+
+      .contact-button {
+        background-color: white;
+        color: $main-color-dark;
+      }
+    }
+  }
+}
