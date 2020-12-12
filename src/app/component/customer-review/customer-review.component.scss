@@ -1,0 +1,78 @@
+@import "~src/scss/variables";
+
+:host {
+  .wrapper {
+    max-width: $content-area-width;
+    padding-top: 130px;
+    padding-bottom: 130px;
+    width: 100%;
+    margin: auto;
+
+    .small-title {
+      font-size: 18px;
+      color: $main-color-pink;
+      text-align: center;
+    }
+
+    .big-title {
+      font-size: 45px;
+      color: $main-color-blue;
+      text-align: center;
+    }
+
+    .review-slide-wrapper {
+      display: grid;
+      grid-template-columns: 60px auto 60px;
+      margin-top: 50px;
+
+      .arrow {
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        background-color: $main-color-blue;
+
+        &.arrow-left {
+
+        }
+
+        &.arrow-right {
+
+        }
+      }
+
+      .slide {
+        .text {
+          font-size: 20px;
+          color: $main-color-blue;
+          padding-left: 60px;
+          padding-right: 60px;
+        }
+
+        .stars {
+          margin-top: 20px;
+          display: flex;
+          justify-content: center;
+        }
+
+        .customer {
+          margin-top: 20px;
+          color: $secondary-color-gray;
+          text-align: center;
+        }
+      }
+    }
+
+    .slider-options {
+      display: flex;
+      justify-content: center;
+
+      .option {
+        margin: 20px 10px;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        background-size: cover;
+      }
+    }
+  }
+}

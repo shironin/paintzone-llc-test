@@ -1,0 +1,18 @@
+@import "~src/scss/variables";
+
+:host {
+  .wrapper {
+    max-width: $content-area-width;
+    width: 100%;
+    margin: auto;
+    padding-top: 130px;
+    padding-bottom: 130px;
+
+    .title {
+      font-size: 45px;
+      width: 100%;
+      text-align: center;
+      color: white;
+    }
+  }
+}

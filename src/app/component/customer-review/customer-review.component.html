@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <div class="small-title">
+    Customer Reviews
+  </div>
+  <div class="big-title">
+    What Our Customers are Saying...
+  </div>
+  <div class="review-slide-wrapper">
+    <div class="arrow arrow-left"></div>
+    <div class="slide">
+      <div class="text">sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample sample </div>
+      <div class="stars">
+        <img class="star" src="assets/icons/star-filled.svg">
+        <img class="star" src="assets/icons/star-filled.svg">
+        <img class="star" src="assets/icons/star-filled.svg">
+      </div>
+      <div class="customer">Mitch S. in Seattle, WA</div>
+    </div>
+    <div class="arrow arrow-right"></div>
+  </div>
+  <div class="slider-options">
+    <div *ngFor="let item of reviews" class="option" [ngStyle]="{'background-image': 'url('+item.customerImageUrl+')'}"></div>
+  </div>
+</div>

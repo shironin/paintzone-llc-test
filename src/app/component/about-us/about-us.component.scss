@@ -6,27 +6,29 @@
     width: 100%;
     margin: auto;
     display: grid;
-    grid-template-columns: 15% 15% 70%;
+    grid-template-columns: 14% 14% 76%;
 
     .pink-text {
       background-color: $main-color-pink;
       writing-mode: tb;
       font-size: 100px;
       transform: rotate(180deg);
-      padding: (3*$padding) 0 (3*$padding) 0;
+      //padding: (3*$padding) 0 (3*$padding) 0;
       margin-top: -100px;
+      height: 500px;
+      width: 150px;
     }
 
     .dark-square {
-      width: 80px;
-      height: 80px;
-      background-color: $main-color-dark;
+      width: 100px;
+      height: 100px;
+      background-color: $main-color-blue;
       justify-self: center;
-      margin-top: 160px;
+      margin-top: 273px;
     }
 
     .text-wrapper {
-      padding-top: 230px;
+      padding-top: 273px;
 
       .title {
 

@@ -3,7 +3,7 @@
 :host {
   .wrapper {
     margin-top: $section-margin;
-    margin-bottom: $section-margin;
+    padding-bottom: 130px;
 
     .header-wrapper {
       width: 100%;
@@ -16,7 +16,7 @@
       grid-template-columns: 20% 20% 20% 20% 20%;
 
       .gallery-item {
-        height: 400px;
+        height: 650px;
         position: relative;
 
         .text {

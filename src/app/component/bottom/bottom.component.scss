@@ -1,0 +1,7 @@
+@import "~src/scss/variables";
+
+:host {
+  .wrapper {
+    background-color: $secondary-color-blue;
+  }
+}

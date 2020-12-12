@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <div class="title">Frequently asked Questions (FAQ)</div>
+  <div class="questions-wrapper">
+    <div class="item" *ngFor="let item of faqs">
+      <div class="toggle-icon"></div>
+      <div class="question">{{ item.question }}</div>
+      <div class="answer">{{ item.answer }}</div>
+      <hr>
+    </div>
+  </div>
+</div>
