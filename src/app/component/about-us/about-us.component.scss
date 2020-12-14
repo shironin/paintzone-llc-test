@@ -3,20 +3,27 @@
 :host {
   .wrapper {
     max-width: $content-area-width;
+    padding-bottom: 130px;
     width: 100%;
     margin: auto;
     display: grid;
-    grid-template-columns: 14% 14% 76%;
+    grid-template-columns: 14% 14% 60%;
 
-    .pink-text {
+    .pink-text-wrapper {
       background-color: $main-color-pink;
       writing-mode: tb;
       font-size: 100px;
+      font-weight: bold;
       transform: rotate(180deg);
-      //padding: (3*$padding) 0 (3*$padding) 0;
       margin-top: -100px;
       height: 500px;
       width: 150px;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .dark-square {
@@ -28,14 +35,29 @@
     }
 
     .text-wrapper {
-      padding-top: 273px;
+      padding-top: 323px;
+      color: $main-color-blue;
+      font-weight: bold;
 
       .title {
-
+        font-size: 45px;
       }
 
       .text {
+        margin-top: 30px;
+        font-size: 20px;
+      }
 
+      button {
+        margin-top: 30px;
+        width: 200px;
+        height: 60px;
+        font-size: 18px;
+        font-weight: bold;
+        color: $main-color-blue;
+        background-color: white;
+        border: 2px solid $main-color-blue;
+        cursor: pointer;
       }
     }
   }

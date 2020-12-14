@@ -16,6 +16,7 @@
 
     .big-title {
       font-size: 45px;
+      font-weight: bold;
       color: $main-color-blue;
       text-align: center;
     }
@@ -30,9 +31,15 @@
         height: 60px;
         border-radius: 60px;
         background-color: $main-color-blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
 
         &.arrow-left {
-
+          img {
+            transform: rotate(180deg);
+          }
         }
 
         &.arrow-right {
@@ -65,6 +72,7 @@
     .slider-options {
       display: flex;
       justify-content: center;
+      align-items: center;
 
       .option {
         margin: 20px 10px;
@@ -72,6 +80,14 @@
         height: 60px;
         border-radius: 60px;
         background-size: cover;
+        cursor: pointer;
+
+        &.active {
+          width: 85px;
+          height: 85px;
+          border-radius: 85px;
+          border: 3px solid $main-color-pink;
+        }
       }
     }
   }

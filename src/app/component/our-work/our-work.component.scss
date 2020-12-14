@@ -35,15 +35,18 @@
       display: flex;
       align-items: center;
       font-size: 45px;
+      font-weight: bold;
       color: $main-color-blue;
 
       .title-pink-square {
         width: 150px;
-        height: 150px;
+        height: 145px;
         background-color: $main-color-pink;
         display: flex;
         align-items: center;
         color: white;
+        margin-left: 5px;
+        padding-left: 5px;
       }
     }
 
@@ -51,15 +54,13 @@
       display: flex;
       width: 100%;
       justify-content: space-between;
-      //grid-template-columns: 33%;
-      //grid-column-gap: 10px;
 
       .image-wrapper {
         width: 370px;
-        //padding: 15px;
 
         .image {
           width: 100%;
+          object-fit: cover;
 
           &.image1 {
             height: 750px;

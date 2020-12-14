@@ -8,8 +8,6 @@
     height: 100px;
     background-color: rgba($main-color-pink-r, $main-color-pink-g, $main-color-pink-b, 0.2);
     display: flex;
-    //padding-left: $padding;
-    //padding-right: $padding;
 
     .inner {
       max-width: $content-area-width;
@@ -33,13 +31,28 @@
           text-align: center;
           color: white;
           align-self: center;
+          font-size: 18px;
+          font-weight: bold;
+          text-decoration: none;
         }
 
         .contact-button {
           background-color: white;
           color: $main-color-blue;
+          width: 130px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
+    }
+
+    &.sticky {
+      position: fixed;
+      top: 0;
+      z-index: 1;
+      background-color: $main-color-pink
     }
   }
 }

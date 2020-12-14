@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+
+  stickyHeader = false;
+
+  @HostListener('window:scroll')
+  stickyHeaderListener(): void {
+    this.stickyHeader = window.pageYOffset > 100;
+  }
 
   constructor() {
   }

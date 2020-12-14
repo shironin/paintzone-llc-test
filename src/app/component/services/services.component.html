@@ -1,10 +1,22 @@
 <div class="wrapper">
   <div class="header-wrapper">
-    <div class="title">Services we Provide</div>
-    <div class="buttons"></div>
+    <div class="title">
+      <div class="separator"></div>
+      Services we Provide
+    </div>
+    <div class="buttons">
+      <div class="button button-left inactive">
+        <img src="assets/icons/arrow-white.svg">
+      </div>
+      <div class="button button-right">
+        <img src="assets/icons/arrow-white.svg">
+      </div>
+    </div>
   </div>
   <div class="gallery">
-    <div *ngFor="let item of galleryItems" class="gallery-item" [ngStyle]="{'background-image': 'url('+item.imageUrl+')'}">
+    <div *ngFor="let item of galleryItems" class="gallery-item">
+      <img [src]="item.imageUrl">
+      <div class="shadow"></div>
       <div class="text">{{ item.text }}</div>
     </div>
   </div>

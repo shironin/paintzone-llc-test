@@ -1,0 +1,96 @@
+@import "~src/scss/variables";
+
+:host {
+  .wrapper {
+    max-width: $content-area-width;
+    width: 100%;
+    margin: auto;
+    padding-top: 130px;
+    padding-bottom: 130px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: white;
+
+    .contact {
+      padding-right: 102px;
+      .form {
+        .form-control {
+          margin-top: 20px;
+
+          button {
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 18px;
+            background-color: $main-color-blue;
+            color: white;
+            border: none;
+          }
+        }
+      }
+    }
+
+    .careers {
+      padding-left: 102px;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+
+      .text {
+        line-height: 30px;
+      }
+
+      button {
+        margin-top: 40px;
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        border: none;
+
+        img {
+          width: 40px;
+        }
+      }
+    }
+  }
+
+  .title-wrapper {
+    position: relative;
+    margin-bottom: 70px;
+    font-weight: bold;
+
+    .title {
+      font-size: 45px;
+    }
+
+    .title-back {
+      top: -48px;;
+      position: absolute;
+      font-size: 120px;
+      opacity: 0.2;
+      color: $secondary-color-blue;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: white;
+    }
+  }
+
+  input, textarea {
+    width: calc(100% - 20px);
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+
+  input {
+    height: 30px;
+  }
+
+  textarea {
+    height: 120px;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
