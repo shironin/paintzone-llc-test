@@ -7,23 +7,38 @@
     width: 100%;
     margin: auto;
     display: grid;
-    grid-template-columns: 14% 14% 60%;
+    grid-template-columns: calc(75px + (150 - 75) * ((100vw - 320px) / (1920 - 320))) 14% auto;
+    @media screen and (max-width: 1000px) {
+      grid-template-columns: 15% 85%;
+    }
+    @media screen and (max-width: 700px) {
+      display: block;
+    }
 
     .pink-text-wrapper {
       background-color: $main-color-pink;
       writing-mode: tb;
-      font-size: 100px;
+      //font-size: 100px;
+      font-size: calc(40px + (100 - 40) * ((100vw - 320px) / (1920 - 320)));
       font-weight: bold;
       transform: rotate(180deg);
       margin-top: -100px;
-      height: 500px;
-      width: 150px;
+      //margin-top: calc(250px + (500 - 250) * ((100vw - 320px) / (1920 - 320)));
+      //height: 500px;
+      height: calc(250px + (500 - 250) * ((100vw - 320px) / (1920 - 320)));
+      min-height: 250px;
+      //width: 150px;
+      width: calc(75px + (150 - 75) * ((100vw - 320px) / (1920 - 320)));
+      min-width: 75px;
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: white;
       display: flex;
       align-items: center;
       justify-content: center;
+      @media screen and (max-width: 700px) {
+        display: none;
+      }
     }
 
     .dark-square {
@@ -31,16 +46,26 @@
       height: 100px;
       background-color: $main-color-blue;
       justify-self: center;
-      margin-top: 273px;
+      margin-top: 213px;
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
     }
 
     .text-wrapper {
-      padding-top: 323px;
+      //padding-top: 323px;
+      padding-top: calc(80px + (323 - 80) * ((100vw - 320px) / (1920 - 320)));
       color: $main-color-blue;
       font-weight: bold;
+      @media screen and (max-width: 700px) {
+        padding: 50px $spacer 0 $spacer;
+      }
 
       .title {
         font-size: 45px;
+        @media screen and (max-width: 700px) {
+          font-size: 35px;
+        }
       }
 
       .text {

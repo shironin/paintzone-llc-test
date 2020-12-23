@@ -2,9 +2,11 @@
 
 :host {
   .wrapper {
-    margin-top: $section-margin;
-    padding-top: 130px;
-    padding-bottom: 130px;
+    //margin-top: $section-margin;
+    margin-top: calc(40px + (230 - 40) * ((100vw - 320px) / (1920 - 320)));
+    //padding-top: 130px;
+    //padding-bottom: 130px;
+    padding-bottom: calc(40px + (130 - 40) * ((100vw - 320px) / (1920 - 320)));
 
     .header-wrapper {
       width: 100%;
@@ -19,21 +21,40 @@
         font-weight: bold;
         color: $main-color-blue;
         display: flex;
+        margin-bottom: 10px;
+        @media screen and (max-width: 700px) {
+          font-size: 35px;
+          margin-bottom: 20px;
+        }
+        @media screen and (max-width: 1200px) {
+          margin-left: $spacer;
+        }
 
         .separator {
           height: 60px;
           width: 10px;
           background-color: $main-color-pink;
           margin-right: 20px;
+          @media screen and (max-width: 700px) {
+            height: 50px;
+          }
         }
       }
 
       .buttons {
         display: flex;
+        @media screen and (max-width: 900px) {
+          display: none;
+        }
+        @media screen and (max-width: 1200px) {
+          margin-right: $spacer;
+        }
 
         .button {
-          height: 100px;
-          width: 100px;
+          //height: 100px;
+          height: 70px;
+          //width: 100px;
+          width: 70px;
           background-color: $main-color-pink;
           display: flex;
           justify-content: center;
@@ -59,12 +80,36 @@
     }
 
     .gallery {
-      display: grid;
-      grid-template-columns: 20% 20% 20% 20% 20%;
+      display: block;
+      white-space: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      width: 100%;
+      @media screen and (max-width: 900px) {
+
+      }
+
+      &.few-items {
+        display: flex;
+        justify-content: center;
+        overflow-x: scroll;
+
+        .gallery-item {
+          min-width: 250px;
+        }
+      }
 
       .gallery-item {
-        height: 650px;
+        //height: 650px;
+        height: 550px;
         position: relative;
+        display: inline-block;
+        width: 300px;
+        @media screen and (max-width: 900px) {
+          width: 250px;
+          height: 450px;
+        }
 
         img {
           width: 100%;

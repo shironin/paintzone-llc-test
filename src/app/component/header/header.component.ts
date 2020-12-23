@@ -8,6 +8,7 @@ import {Component, HostListener} from '@angular/core';
 export class HeaderComponent {
 
   stickyHeader = false;
+  menuOpened = false;
 
   @HostListener('window:scroll')
   stickyHeaderListener(): void {

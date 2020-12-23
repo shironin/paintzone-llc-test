@@ -6,20 +6,24 @@
     What Our Customers are Saying...
   </div>
   <div class="review-slide-wrapper">
-    <div class="arrow arrow-left" (click)="switchLeft()">
-      <img src="assets/icons/arrow-white.svg">
+    <div class="arrow-wrapper">
+      <div class="arrow arrow-left" (click)="switchLeft()">
+        <img src="assets/icons/arrow-white.svg">
+      </div>
     </div>
     <div class="slide">
       <div class="text">{{ currentText }}</div>
-      <div class="stars">
-        <img class="star" *ngFor="let star of currentStars" src="assets/icons/star-filled.svg">
-      </div>
-      <div class="customer">{{ currentCustomer }}</div>
     </div>
-    <div class="arrow arrow-right" (click)="switchRight()">
-      <img src="assets/icons/arrow-white.svg">
+    <div class="arrow-wrapper">
+      <div class="arrow arrow-right" (click)="switchRight()">
+        <img src="assets/icons/arrow-white.svg">
+      </div>
     </div>
   </div>
+  <div class="stars">
+    <img class="star" *ngFor="let star of currentStars" src="assets/icons/star-filled.svg">
+  </div>
+  <div class="customer">{{ currentCustomer }}</div>
   <div class="slider-options">
     <div
       *ngFor="let item of reviews, let i = index"

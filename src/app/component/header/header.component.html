@@ -7,5 +7,14 @@
       <a href="#" class="nav-button">Work</a>
       <a href="#" class="nav-button contact-button">Contact</a>
     </div>
+    <div class="menu-button" [class.open]="menuOpened" (click)="menuOpened=!menuOpened">
+      <img src="assets/icons/menu.svg">
+    </div>
+    <div class="menu-dropdown" [class.open]="menuOpened">
+      <a href="#" class="nav-button" (click)="menuOpened=false">Services</a>
+      <a href="#" class="nav-button" (click)="menuOpened=false">About Us</a>
+      <a href="#" class="nav-button" (click)="menuOpened=false">Work</a>
+      <a href="#" class="nav-button contact-button" (click)="menuOpened=false">Contact</a>
+    </div>
   </div>
 </div>

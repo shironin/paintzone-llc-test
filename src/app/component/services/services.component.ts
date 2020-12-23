@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss'],
 })
-export class ServicesComponent {
+export class ServicesComponent implements DoCheck {
+
+  gallery = null;
+  carouselScrolledToEnd = false;
+  carouselScrolledToStart = false;
+  showScrollButtons = false;
+  itemsOnCenter = false;
   galleryItems = [
     {
       text: 'Interior',
@@ -30,5 +36,35 @@ export class ServicesComponent {
   ];
 
   constructor() {
+  }
+
+  ngDoCheck(): void {
+    this.gallery = document.getElementById('services_gallery');
+    this.adjustGalleryState();
+  }
+
+  adjustGalleryState(): void {
+    this.carouselScrolledToEnd = (this.gallery.scrollLeft + this.gallery.clientWidth >= (this.gallery.scrollWidth - 2));
+    this.carouselScrolledToStart = (this.gallery.scrollLeft === 0);
+    this.showScrollButtons = (this.gallery.clientWidth < this.gallery.scrollWidth);
+    this.itemsOnCenter = !(this.gallery.clientWidth < this.gallery.scrollWidth);
+  }
+
+  moveCarousel(direction = 'right'): void {
+    const step = 30;
+    const distance = 350;
+    const speed = 15;
+    let scrollAmount = 0;
+    const slideTimer = setInterval(() => {
+      scrollAmount += step;
+      if (direction === 'right') {
+        this.gallery.scrollLeft += step;
+      } else {
+        this.gallery.scrollLeft -= step;
+      }
+      if (scrollAmount >= distance) {
+        window.clearInterval(slideTimer);
+      }
+    }, speed);
   }
 }

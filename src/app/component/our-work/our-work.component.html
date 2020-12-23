@@ -9,13 +9,16 @@
   </div>
   <div class="images-wrapper">
     <div class="image-wrapper">
-      <img class="image image1" [src]="imageUrl1" alt="image1">
+      <img class="image image1" [src]="image1.url" alt="image1" [class.image-hover]="image1.hover">
+      <div class="image-activation activation1" (click)="setFrontImage(1)" (mouseover)="image1.hover = true" (mouseleave)="image1.hover = false"></div>
     </div>
     <div class="image-wrapper">
-      <img class="image image2" [src]="imageUrl2" alt="image2">
+      <img class="image image2" [src]="image2.url" alt="image2" [class.image-hover]="image2.hover">
+      <div class="image-activation activation2" (click)="setFrontImage(2)" (mouseover)="image2.hover = true" (mouseleave)="image2.hover = false"></div>
     </div>
     <div class="image-wrapper">
-      <img class="image image3" [src]="imageUrl3" alt="image3">
+      <img class="image image3" [src]="image3.url" alt="image3" [class.image-hover]="image3.hover">
+      <div class="image-activation activation3" (click)="setFrontImage(3)" (mouseover)="image3.hover = true" (mouseleave)="image3.hover = false"></div>
     </div>
   </div>
 </div>

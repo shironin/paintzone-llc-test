@@ -4,17 +4,17 @@
       <div class="separator"></div>
       Services we Provide
     </div>
-    <div class="buttons">
-      <div class="button button-left inactive">
+    <div class="buttons" *ngIf="showScrollButtons">
+      <div class="button button-left" (click)="moveCarousel('left')" [class.inactive]="carouselScrolledToStart">
         <img src="assets/icons/arrow-white.svg">
       </div>
-      <div class="button button-right">
+      <div class="button button-right" (click)="moveCarousel('right')" [class.inactive]="carouselScrolledToEnd">
         <img src="assets/icons/arrow-white.svg">
       </div>
     </div>
   </div>
-  <div class="gallery">
-    <div *ngFor="let item of galleryItems" class="gallery-item">
+  <div class="gallery hide-scrollbar" id="services_gallery" (scroll)="adjustGalleryState()" [class.few-items]="itemsOnCenter">
+    <div *ngFor="let item of galleryItems" class="gallery-item" (click)="adjustGalleryState()">
       <img [src]="item.imageUrl">
       <div class="shadow"></div>
       <div class="text">{{ item.text }}</div>

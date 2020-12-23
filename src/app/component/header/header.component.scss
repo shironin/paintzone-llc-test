@@ -5,9 +5,12 @@
     position: absolute;
     width: 100%;
     box-sizing: border-box;
-    height: 100px;
+    height: 80px;
     background-color: rgba($main-color-pink-r, $main-color-pink-g, $main-color-pink-b, 0.2);
     display: flex;
+    @media screen and (max-width: 1200px) {
+      height: 70px;
+    }
 
     .inner {
       max-width: $content-area-width;
@@ -15,6 +18,12 @@
       margin: auto;
       display: grid;
       grid-template-columns: 100px auto;
+      @media screen and (max-width: 1200px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 $spacer 0 $spacer;
+      }
 
       .logo {
         width:50px;
@@ -25,6 +34,9 @@
       .buttons {
         display: flex;
         justify-content: flex-end;
+        @media screen and (max-width: 1200px) {
+          display: none;
+        }
 
         .nav-button {
           width: 100px;
@@ -40,10 +52,50 @@
           background-color: white;
           color: $main-color-blue;
           width: 130px;
-          height: 50px;
+          height: 40px;
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+      }
+
+      .menu-button {
+        display: none;
+        cursor: pointer;
+        @media screen and (max-width: 1200px) {
+          display: flex;
+          justify-content: flex-end;
+        }
+
+        &.open {
+          box-shadow: 0 2px 3px grey;
+        }
+      }
+
+      .menu-dropdown {
+        display: none;
+        position: absolute;
+        background-color: white;
+        right: $spacer;
+        top: 49px;
+        box-shadow: 0 2px 3px grey;
+        width: 150px;
+
+        a {
+          padding: 10px;
+          text-decoration: none;
+          color: $main-color-blue;
+          font-weight: bold;
+          text-align: center;
+
+          &:hover {
+            background-color: $main-color-pink;
+            color: white;
+          }
+        }
+
+        &.open {
+          display: grid;
         }
       }
     }
@@ -51,7 +103,7 @@
     &.sticky {
       position: fixed;
       top: 0;
-      z-index: 1;
+      z-index: $sticky-header-z-index;
       background-color: $main-color-pink
     }
   }

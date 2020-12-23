@@ -19,31 +19,58 @@
       font-weight: bold;
       color: $main-color-blue;
       text-align: center;
+      @media screen and (max-width: 700px) {
+        font-size: 35px;
+      }
     }
 
     .review-slide-wrapper {
       display: grid;
       grid-template-columns: 60px auto 60px;
       margin-top: 50px;
+      @media screen and (max-width: 600px) {
+        grid-template-columns: 30px auto 30px;
+      }
 
-      .arrow {
-        width: 60px;
-        height: 60px;
-        border-radius: 60px;
-        background-color: $main-color-blue;
+      .arrow-wrapper {
         display: flex;
-        justify-content: center;
         align-items: center;
-        cursor: pointer;
+        justify-content: center;
 
-        &.arrow-left {
-          img {
-            transform: rotate(180deg);
+        .arrow {
+          width: 50px;
+          height: 50px;
+          border-radius: 60px;
+          background-color: $main-color-blue;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          @media screen and (max-width: 600px) {
+            height: 55px;
+            width: 20px;
+            border-radius: 20px;
+
+            img {
+              width: 10px;
+            }
           }
-        }
 
-        &.arrow-right {
+          &:hover {
+            box-shadow: 0 0 15px 1px $main-color-blue;
+          }
 
+          &.arrow-left {
+            margin-left: 10px;
+
+            img {
+              transform: rotate(180deg);
+            }
+          }
+
+          &.arrow-right {
+            margin-right: 10px;
+          }
         }
       }
 
@@ -53,20 +80,25 @@
           color: $main-color-blue;
           padding-left: 60px;
           padding-right: 60px;
-        }
-
-        .stars {
-          margin-top: 20px;
-          display: flex;
-          justify-content: center;
-        }
-
-        .customer {
-          margin-top: 20px;
-          color: $secondary-color-gray;
           text-align: center;
+          @media screen and (max-width: 600px) {
+            padding-left: 5px;
+            padding-right: 5px;
+          }
         }
       }
+    }
+
+    .stars {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .customer {
+      margin-top: 20px;
+      color: $secondary-color-gray;
+      text-align: center;
     }
 
     .slider-options {
@@ -81,12 +113,30 @@
         border-radius: 60px;
         background-size: cover;
         cursor: pointer;
+        @media screen and (max-width: 500px) {
+          width: 40px;
+          height: 40px;
+          border-radius: 40px;
+        }
+
+        &:hover {
+          box-shadow: 0 0 15px 1px $main-color-blue;
+        }
 
         &.active {
           width: 85px;
           height: 85px;
           border-radius: 85px;
           border: 3px solid $main-color-pink;
+          @media screen and (max-width: 500px) {
+            width: 60px;
+            height: 60px;
+            border-radius: 60px;
+          }
+
+          &:hover {
+            box-shadow: 0 0 15px 1px $main-color-pink;
+          }
         }
       }
     }

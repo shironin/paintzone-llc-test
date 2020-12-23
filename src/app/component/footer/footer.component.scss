@@ -4,6 +4,13 @@
   .wrapper {
     background-color: $main-color-blue;
     height: 100px;
+    @media screen and (max-width: 1200px) {
+      padding-right: $spacer;
+      padding-left: $spacer;
+    }
+    @media screen and (max-width: 800px) {
+      height: unset;
+    }
 
     .inner {
       max-width: $content-area-width;
@@ -14,6 +21,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media screen and (max-width: 800px) {
+        display: block;
+        text-align: center;
+        padding: 5px 0 5px 0;
+      }
 
       .icon {
         margin: 10px;
