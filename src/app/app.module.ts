@@ -10,8 +10,12 @@ import { BottomComponent } from '@component/bottom/bottom.component';
 import { FaqComponent } from '@component/faq/faq.component';
 import { ContactComponent } from '@component/contact/contact.component';
 import { FooterComponent } from '@component/footer/footer.component';
+import { ElementScrollAppearDirective } from './directive/element-scroll-appear.directive';
+import { CareerModalComponent } from '@component/career-modal/career-modal.component';
 
 import { AppComponent } from './app.component';
+import { EventsService } from './service/events.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,12 +29,15 @@ import { AppComponent } from './app.component';
     BottomComponent,
     FaqComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    ElementScrollAppearDirective,
+    CareerModalComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [EventsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,17 @@
+<div class="modal-wrapper" [class.open]="modalOpen" (click)="clickOutside($event)">
+  <div class="modal">
+    <span class="close" (click)="modalOpen = false">&times;</span>
+    <div class="title">BE PART OF OUR TEAM</div>
+    <div class="form">
+      <form [formGroup]="careerForm">
+        <input type="text" formControlName="name" placeholder="Name">
+        <input type="tel" formControlName="phone" placeholder="Phone number" inputmode="tel">
+        <input type="email" formControlName="email" placeholder="Email" inputmode="email">
+        <textarea type="text" formControlName="infoText" placeholder="About You"></textarea>
+      </form>
+    </div>
+    <div class="submit">
+      <button (click)="submitCareer()" [class.disabled]="!careerForm.valid">SUBMIT</button>
+    </div>
+  </div>
+</div>

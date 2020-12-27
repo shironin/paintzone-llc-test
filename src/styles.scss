@@ -78,3 +78,35 @@ html {
   font-style: normal;
   font-display: swap;
 }
+
+.fade-in {
+  animation: fade-in 4s;
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.fade-out {
+  animation: fade-out 4s;
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+.element-scroll-appear {
+  opacity: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}

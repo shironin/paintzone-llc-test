@@ -10,13 +10,12 @@
     display: grid;
     grid-template-columns: 50% 50%;
     color: white;
-    @media screen and (max-width: 1200px) {
-      //display: block;
-      padding-top: calc(20px + (130 - 40) * ((100vw - 320px) / (1920 - 320)));
+    @media screen and (max-width: 700px) {
+      padding-top: 90px;
+      padding-bottom: 90px;
     }
     @media screen and (max-width: 650px) {
       display: block;
-      //padding-top: calc(20px + (130 - 40) * ((100vw - 320px) / (1920 - 320)));
     }
 
     .contact {
@@ -33,10 +32,21 @@
             width: 100%;
             padding-top: 20px;
             padding-bottom: 20px;
-            font-size: 18px;
+            font-size: 17px;
+            font-weight: bold;
             background-color: $main-color-blue;
             color: white;
             border: none;
+
+            &:hover {
+              box-shadow: 4px 3px 3px rgba(0,0,0,0.4);
+            }
+          }
+
+          input, textarea {
+            &.error {
+              border: 3px solid $main-color-pink;
+            }
           }
         }
       }
@@ -69,6 +79,10 @@
         @media screen and (max-width: 700px) {
           width: 70px;
           height: 70px;
+        }
+
+        &:hover {
+          box-shadow: 4px 3px 3px rgba(0,0,0,0.4);
         }
 
         img {

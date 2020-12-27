@@ -1,0 +1,97 @@
+@import "~src/scss/variables";
+
+:host {
+  .modal-wrapper {
+    left: -120vw;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: $career-modal-z-index;
+    background-color: rgba($main-color-blue-r, $main-color-blue-g, $main-color-blue-b, 0.2);
+    backdrop-filter: blur(7px);
+    transition: left 0.3s;
+
+    .modal {
+      position: relative;
+      width: calc(100% - 200px);
+      margin-left: 50px;
+      margin-top: 50px;
+      box-shadow: 0 0 40px $main-color-blue;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 10px;
+      padding: 50px;
+      text-align: center;
+      @media screen and (max-width: 600px) {
+        width: calc(100% - 60px);
+        margin-left: 15px;
+        margin-top: 15px;
+        padding: 50px 15px;
+      }
+
+      .close {
+        position: absolute;
+        right: 15px;
+        top: 3px;
+        font-size: 32px;
+        cursor: pointer;
+      }
+
+      .title {
+        font-size: 35px;
+        color: white;
+        text-shadow: 4px 1px 2px rgba(0,0,0,0.5);
+      }
+
+      .form {
+        max-width: 350px;
+        margin: auto;
+
+        input, textarea {
+          width: calc(100% - 20px);
+          height: 40px;
+          border: none;
+          margin-top: 10px;
+          padding: 10px;
+          font-size: 16px;
+          box-shadow: 4px 3px 3px rgba(0,0,0,0.4);
+        }
+
+        textarea {
+          height: 100px;
+        }
+      }
+
+      .submit {
+        max-width: 350px;
+        margin: auto;
+
+        button {
+          margin-top: 10px;
+          width: 100%;
+          background-color: white;
+          border: none;
+          border-radius: 3px;
+          color: $main-color-pink;
+          font-size: 25px;
+          cursor: pointer;
+          height: 40px;
+
+          &:hover:not(.disabled) {
+            background-color: white;
+            color: $main-color-pink;
+          }
+
+          &:not(.disabled) {
+            box-shadow: 4px 3px 3px rgba(0,0,0,0.4);
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    &.open {
+      left: 0;
+    }
+  }
+}

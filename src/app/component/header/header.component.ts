@@ -17,4 +17,10 @@ export class HeaderComponent {
 
   constructor() {
   }
+
+  scrollToElement(id): void {
+    this.menuOpened = false;
+    const element = document.querySelector(id);
+    element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+  }
 }

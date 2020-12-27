@@ -1,10 +1,16 @@
 <div class="wrapper">
   <div class="title">Frequently asked Questions (FAQ)</div>
   <div class="questions-wrapper">
-    <div class="item" *ngFor="let item of faqs, let i = index" [class.opened]="item.opened" (click)="toggleItem(i)">
+    <div
+      class="item element-scroll-appear"
+      appElementScrollAppear
+      *ngFor="let item of faqs, let i = index, let last = last"
+      [class.opened]="item.opened"
+      [class.last]="last"
+      (click)="toggleItem(i)"
+    >
       <div class="question">{{ item.question }}</div>
       <div class="answer">{{ item.answer }}</div>
-      <hr class="separator">
     </div>
   </div>
 </div>

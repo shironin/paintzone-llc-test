@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper" id="customer-reviews-section">
   <div class="small-title">
     Customer Reviews
   </div>
@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="slide">
-      <div class="text">{{ currentText }}</div>
+      <div class="text element-scroll-appear" appElementScrollAppear>{{ currentText }}</div>
     </div>
     <div class="arrow-wrapper">
       <div class="arrow arrow-right" (click)="switchRight()">

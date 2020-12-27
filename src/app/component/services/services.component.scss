@@ -2,11 +2,12 @@
 
 :host {
   .wrapper {
-    //margin-top: $section-margin;
-    margin-top: calc(40px + (230 - 40) * ((100vw - 320px) / (1920 - 320)));
-    //padding-top: 130px;
-    //padding-bottom: 130px;
-    padding-bottom: calc(40px + (130 - 40) * ((100vw - 320px) / (1920 - 320)));
+    padding-top: 130px;
+    padding-bottom: 130px;
+    @media screen and (max-width: 700px) {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
 
     .header-wrapper {
       width: 100%;
@@ -51,9 +52,7 @@
         }
 
         .button {
-          //height: 100px;
           height: 70px;
-          //width: 100px;
           width: 70px;
           background-color: $main-color-pink;
           display: flex;

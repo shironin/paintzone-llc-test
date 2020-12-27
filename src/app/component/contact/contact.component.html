@@ -1,27 +1,50 @@
-<div class="wrapper">
+<div class="wrapper" id="contact-section">
     <div class="contact">
         <div class="title-wrapper">
             <div class="title">Contact</div>
             <div class="title-back">Contact</div>
         </div>
 
-        <div class="form">
+        <form class="form" [formGroup]="contactForm">
             <div class="form-control">
-                <input type="text" autocomplete="off" placeholder="Name">
+                <input
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Name"
+                  formControlName="name"
+                  [class.error]="submitAttempt && contactForm.get('name').hasError('required')"
+                >
             </div>
             <div class="form-control">
-                <input type="text" autocomplete="off" placeholder="Email">
+                <input
+                  type="email"
+                  autocomplete="off"
+                  placeholder="Email"
+                  inputmode="email"
+                  formControlName="email"
+                  [class.error]="submitAttempt && contactForm.get('email').hasError('required')"
+                >
             </div>
             <div class="form-control">
-                <input type="text" autocomplete="off" placeholder="Address">
+                <input
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Address"
+                  formControlName="address"
+                  [class.error]="submitAttempt && contactForm.get('address').hasError('required')"
+                >
             </div>
             <div class="form-control">
-                <textarea placeholder="Your Message"></textarea>
+                <textarea
+                  placeholder="Your Message"
+                  formControlName="message"
+                  [class.error]="submitAttempt && contactForm.get('message').hasError('required')"
+                ></textarea>
             </div>
             <div class="form-control">
-                <button>Submit Now</button>
+                <button (click)="submitContact()">Submit Now</button>
             </div>
-        </div>
+        </form>
     </div>
     <div class="careers">
         <div class="title-wrapper">
@@ -29,7 +52,7 @@
             <div class="title-back">Careers</div>
         </div>
         <div class="text">Ready to get started? We’re ready to help! Click here for a quote or to consult with one of our professionals.</div>
-        <button>
+        <button (click)="toggleCareerModal()">
             <img src="assets/icons/arrow-blue.svg">
         </button>
     </div>

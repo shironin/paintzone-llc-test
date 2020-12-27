@@ -21,7 +21,7 @@ export class FaqComponent {
     {
       opened: false,
       question: 'Question number 03 goes in here?',
-      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet.',
+      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium p dolor sit amet, consectetur adipiscing elit. Ut pretium p dolor sit amet, consectetur adipiscing elit. Ut pretium p dolor sit amet, consectetur adipiscing elit. Ut pretium p dolor sit amet, consectetur adipiscing elit. Ut pretium p dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet.',
     },
     {
       opened: false,

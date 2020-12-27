@@ -7,6 +7,10 @@
     margin: auto;
     padding-top: 130px;
     padding-bottom: 130px;
+    @media screen and (max-width: 700px) {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
 
     .title {
       font-size: 45px;
@@ -27,6 +31,8 @@
         color: white;
         position: relative;
         cursor: pointer;
+        padding-bottom: 40px;
+        border-bottom: 1px solid white;
 
         .question {
           font-size: 20px;
@@ -50,9 +56,13 @@
           line-height: 30px;
         }
 
-        .separator {
-          margin-top: 40px;
+        &.last {
+          border-bottom: none;
         }
+
+        //.separator {
+        //  margin-top: 40px;
+        //}
 
         &.opened {
           .question {
