@@ -1,12 +1,13 @@
 <div class="wrapper" id="home-section">
-  <img class="main-image" src="assets/zdbf.png">
+<!--  <img class="main-image" src="assets/main-background.jpg">-->
   <div class="title-wrapper">
     <div class="block-effect" style="--td: 1.2s">
       <div class="title" style="--bc: #ED008C; --d: .2s" [class.block-reveal]="animationClass">LET'S PAINT YOUR FUTURE</div>
       <div class="subtitle" style="--bc: #13375B; --d: .6s" [class.block-reveal]="animationClass">Challenge Your comfort zone</div>
+      <a class="call-button" href="tel:{{ rawPhoneNumber }}">{{ phoneNumber }}</a>
     </div>
   </div>
   <div class="button-wrapper">
-    <button type="button">Schedule an estimate</button>
+    <button type="button" (click)="smoothScrollToElement('#contact-section')">Schedule an estimate</button>
   </div>
 </div>

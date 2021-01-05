@@ -2,6 +2,7 @@
 
 :host {
   .modal-wrapper {
+    padding-top: 70px;
     left: -120vw;
     position: fixed;
     top: 0;
@@ -11,12 +12,15 @@
     background-color: rgba($main-color-blue-r, $main-color-blue-g, $main-color-blue-b, 0.2);
     backdrop-filter: blur(7px);
     transition: left 0.3s;
+    @media screen and (max-width: 600px) {
+      padding-top: 25px;
+    }
 
     .modal {
       position: relative;
+      max-width: 500px;
       width: calc(100% - 200px);
-      margin-left: 50px;
-      margin-top: 50px;
+      margin: auto;
       box-shadow: 0 0 40px $main-color-blue;
       background-color: rgba(255, 255, 255, 0.4);
       border-radius: 10px;

@@ -12,10 +12,14 @@ import { ContactComponent } from '@component/contact/contact.component';
 import { FooterComponent } from '@component/footer/footer.component';
 import { ElementScrollAppearDirective } from './directive/element-scroll-appear.directive';
 import { CareerModalComponent } from '@component/career-modal/career-modal.component';
-
 import { AppComponent } from './app.component';
 import { EventsService } from './service/events.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MainPageComponent } from '@component/main-page/main-page.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { PortfolioPageComponent } from '@component/portfolio-page/portfolio-page.component';
+import { PortfolioComponent } from '@component/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +35,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactComponent,
     FooterComponent,
     ElementScrollAppearDirective,
-    CareerModalComponent
+    CareerModalComponent,
+    MainPageComponent,
+    PortfolioPageComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [EventsService],
   bootstrap: [AppComponent]

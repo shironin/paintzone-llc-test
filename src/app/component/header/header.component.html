@@ -1,22 +1,25 @@
-<div class="wrapper" [class.sticky]="stickyHeader">
+<div class="wrapper" [class.sticky]="stickyHeader" [class.on-main-page]="onMainPage">
   <div class="inner">
-    <div class="logo" (click)="scrollToElement('#home-section')"></div>
+<!--    <div class="logo" (click)="navigateTo('#home-section')"></div>-->
+    <img class="logo" src="assets/logo.png" (click)="navigateTo('#home-section')">
     <div class="buttons">
-      <a class="nav-button" (click)="scrollToElement('#about-us-section')">About Us</a>
-      <a class="nav-button" (click)="scrollToElement('#services-section')">Services</a>
-      <a class="nav-button" (click)="scrollToElement('#work-section')">Work</a>
-      <a class="nav-button wide" (click)="scrollToElement('#customer-reviews-section')">Customer Reviews</a>
-      <a class="nav-button contact-button" (click)="scrollToElement('#contact-section')">Contact</a>
+      <a class="nav-button" (click)="navigateTo('#about-us-section')">About Us</a>
+      <a class="nav-button" (click)="navigateTo('#services-section')">Services</a>
+      <a class="nav-button" (click)="navigateTo('#portfolio-section', '/portfolio')">Portfolio</a>
+      <a class="nav-button wide" (click)="navigateTo('#customer-reviews-section')">Customer Reviews</a>
+      <a class="nav-button" (click)="navigateTo('#contact-section')">Contact</a>
+      <a class="nav-button call-button" href="tel:{{ rawPhoneNumber }}">{{ phoneNumber }}</a>
     </div>
-    <div class="menu-button" [class.open]="menuOpened" (click)="menuOpened=!menuOpened">
-      <img src="assets/icons/menu.svg">
+    <div class="menu-button" [class.open]="menuOpened">
+      <a class="nav-button call-button" href="tel:{{ rawPhoneNumber }}">{{ phoneNumber }}</a>
+      <img src="assets/icons/menu.svg" (click)="menuOpened=!menuOpened">
     </div>
     <div class="menu-dropdown" [class.open]="menuOpened">
-      <a class="nav-button" (click)="scrollToElement('#about-us-section')">About Us</a>
-      <a class="nav-button" (click)="scrollToElement('#services-section')">Services</a>
-      <a class="nav-button" (click)="scrollToElement('#work-section')">Work</a>
-      <a class="nav-button" (click)="scrollToElement('#customer-reviews-section')">Customer Reviews</a>
-      <a class="nav-button" (click)="scrollToElement('#contact-section')">Contact</a>
+      <a class="nav-button" (click)="navigateTo('#about-us-section')">About Us</a>
+      <a class="nav-button" (click)="navigateTo('#services-section')">Services</a>
+      <a class="nav-button" (click)="navigateTo('#portfolio-section', '/portfolio')">Portfolio</a>
+      <a class="nav-button" (click)="navigateTo('#customer-reviews-section')">Customer Reviews</a>
+      <a class="nav-button" (click)="navigateTo('#contact-section')">Contact</a>
     </div>
   </div>
 </div>

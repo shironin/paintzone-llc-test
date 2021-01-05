@@ -2,13 +2,10 @@
   <div class="pink-text-wrapper">About Us</div>
   <div class="dark-square"></div>
   <div class="text-wrapper">
-    <div class="title element-scroll-appear" appElementScrollAppear>About PaintZone</div>
-    <div class="text" appElementScrollAppear>
-      PaintZone believes in having client satisfaction the core tenant in all projects of any kind residential painting or commercial painting.
+    <div class="title">About PaintZone</div>
+    <div class="text element-scroll-appear" appElementScrollAppear *ngFor="let item of paragraphsToShow">
+      {{ item }}
     </div>
-    <div class="text element-scroll-appear" appElementScrollAppear>
-      Our mission is to be open and honest with our clients, easing any worries you, your family, or business may have along the way. We believe in having your expectations become our expectations.
-    </div>
-    <button>Learn More</button>
+    <button [class.hidden]="paragraphs.length === paragraphsToShow.length" (click)="showAllParagraphs()">Learn More</button>
   </div>
 </div>

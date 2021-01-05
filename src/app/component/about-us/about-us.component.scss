@@ -3,7 +3,6 @@
 :host {
   .wrapper {
     max-width: $content-area-width;
-    //padding-bottom: 130px;
     padding-bottom: calc(50px + (130 - 40) * ((100vw - 320px) / (1920 - 320)));
     width: 100%;
     margin: auto;
@@ -34,6 +33,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
       @media screen and (max-width: 700px) {
         display: none;
       }
@@ -80,6 +80,10 @@
         background-color: white;
         border: 2px solid $main-color-blue;
         cursor: pointer;
+
+        &.hidden {
+          display: none;
+        }
       }
     }
   }

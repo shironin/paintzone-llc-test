@@ -1,0 +1,23 @@
+<div class="wrapper" id="portfolio-section">
+  <div class="title">
+    <div class="separator"></div>
+    Portfolio
+  </div>
+  <div class="categories-wrapper">
+    <div
+      class="category-item"
+      *ngFor="let item of categories"
+      [class.active]="item.active"
+      (click)="activateCategory(item.id)"
+    >
+      {{ item.name }}
+    </div>
+  </div>
+  <div class="gallery-wrapper">
+    <div class="gallery-item" *ngFor="let item of imagesToShow">
+      <img [alt]="item.title" [src]="item.url">
+      <div class="shadow"></div>
+      <div class="text">{{ item.title }}</div>
+    </div>
+  </div>
+</div>

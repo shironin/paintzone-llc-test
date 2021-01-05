@@ -6,13 +6,22 @@
     width: 100%;
     box-sizing: border-box;
     height: 80px;
-    background-color: rgba($main-color-pink-r, $main-color-pink-g, $main-color-pink-b, 0.2);
     display: flex;
+    z-index: $sticky-header-z-index;
     @media screen and (max-width: 1200px) {
       height: 70px;
     }
 
+    &.on-main-page {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    &:not(.on-main-page) {
+      background-color: $main-color-pink;
+    }
+
     .inner {
+      font-family: 'Brother 1816 Thin';
       max-width: $content-area-width;
       width: 100%;
       margin: auto;
@@ -26,9 +35,12 @@
       }
 
       .logo {
-        width:50px;
-        height: 50px;
-        background-color: #13375B;
+        height: 30px;
+        align-self: center;
+        cursor: pointer;
+        @media screen and (max-width: 1200px) {
+          height: 20px;
+        }
       }
 
       .buttons {
@@ -39,32 +51,34 @@
         }
 
         .nav-button {
-          width: 100px;
+          width: 105px;
           text-align: center;
           color: white;
           align-self: center;
-          font-size: 18px;
+          font-size: 20px;
           font-weight: bold;
           text-decoration: none;
           cursor: pointer;
 
           &.wide {
-            width: 180px;
+            width: 190px;
           }
 
-          &:hover:not(.contact-button) {
+          &:hover:not(.call-button) {
             text-shadow: 4px 3px 3px rgba(0,0,0,0.4);
           }
         }
 
-        .contact-button {
+        .call-button {
           background-color: white;
           color: $main-color-blue;
-          width: 130px;
+          width: 150px;
+          font-size: 18px;
           height: 40px;
           display: flex;
           align-items: center;
           justify-content: center;
+          border-radius: 3px;
 
           &:hover {
             background-color: $main-color-blue;
@@ -83,6 +97,30 @@
 
         &.open {
           box-shadow: 0 2px 3px grey;
+        }
+
+        .call-button {
+          background-color: white;
+          color: $main-color-blue;
+          width: 130px;
+          font-size: 17px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+          margin-right: 24px;
+          text-decoration: none;
+          padding: 3px 10px;
+          border-radius: 3px;
+          @media screen and (max-width: 500px) {
+            display: none;
+          }
+
+          &:hover {
+            background-color: $main-color-blue;
+            color: white;
+          }
         }
       }
 
@@ -118,6 +156,7 @@
     &.sticky {
       position: fixed;
       top: 0;
+      box-shadow: 0 0 10px grey;
       z-index: $sticky-header-z-index;
       background-color: $main-color-pink
     }
